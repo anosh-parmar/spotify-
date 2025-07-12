@@ -1,0 +1,117 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.overlay::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  filter: blur(2px);
+  z-index: -1;
+}
+.centered-div {
+  position: relative;
+  z-index: 1;
+  width: 800px;
+  height: 400px;
+  background: linear-gradient(
+    to bottom,
+    rgb(112, 197, 162),
+    rgb(122, 194, 164),
+    rgb(83, 119, 104),
+    rgb(33, 43, 33)
+  );
+  border-radius: 20px;
+  border: 1px solid #000;
+  padding: 40px 70px 40px 70px;
+}
+.intocentered-div {
+  height: 100%;
+}
+.icd1 {
+  width: 40%;
+  height: 100%;
+  float: left;
+  border-radius: 20px;
+  padding: 0;
+}
+.icd1 img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 20px;
+}
+.icd2 {
+  width: 55%;
+  height: 100%;
+  float: right;
+  padding: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-wrap: wrap;
+}
+.icd2 h1{
+  margin-left: 30px;
+  margin-bottom: 40px;
+}
+.icd2 button{
+  height: 40px;
+  width: 140px;
+  border-radius: 40px;
+  margin-bottom: 10px;
+}
+.icd2 h6{
+  margin-top: 40px;
+}
+.icdbutton1{
+  background-color: rgb(87, 228, 87);
+  border:  rgb(87, 228, 87);
+}
+.icdbutton2{
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+.icd2 h6 a{
+  margin-left: 10px;
+  color: white;
+}
+@media (max-width:815px){
+  .centered-div{
+    height: 700px;
+  }
+  .intocentered-div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width:556px){
+  .intocentered-div .icd1{
+    height: 200px;
+    width: 200px;
+  }
+}
+
+@media (max-width:360px){
+  .centered-div{
+    height: 100%;
+    width: 100%;
+  }
+}
