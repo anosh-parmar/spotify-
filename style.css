@@ -745,7 +745,7 @@ h5 {
   }
 }
 .One .RightMainCard:nth-child(1) .one {
-  background-image: url("/pngs/1-1.png");
+  background-image: url("pngs/1-1.png");
   background-size: cover;
   background-position: center;
 } 
